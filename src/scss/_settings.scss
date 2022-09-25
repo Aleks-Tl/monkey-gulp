@@ -1,0 +1,131 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+.page {
+  height: 100%;
+  font-family: var(--font-family, sans-serif);
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+.page__body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100%;
+  font-size: 22px;
+  font-weight: 400;
+  font-style: normal;
+  position: relative;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn-reset {
+  border: none;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.list-reset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/*
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+} */
+
+.container {
+  margin: 0 auto;
+  padding: 0 var(--container-offset);
+  max-width: var(--container-width);
+}
+
+.container__fluid {
+  padding: 0 20px;
+  @media (max-width: 992px) {
+    padding: 0 10px;
+  }
+  @media (max-width: 576px) {
+    padding: 0;
+  }
+}
+
+.js-focus-visible :focus:not(.focus-visible) {
+  outline: none;
+}
+
+.btn {
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 33px;
+  color: #FFFFFF;
+  background: linear-gradient(135deg, rgba(69, 252, 219, 0.8) 0%, rgba(30, 132, 252, 0.8) 96.83%), linear-gradient(135deg, #A1FF8B 0%, #3F93FF 96.83%) !important;
+  box-shadow: 0px 28px 45px rgba(48, 112, 237, 0.25);
+  border-radius: 90px;
+  padding: 20px 0;
+  transition: all 0.3s ease 0s;
+  &:hover {
+    box-shadow: 0px 0px 35px rgba(48, 112, 237, 0.75);
+    color: #ffffff;
+  }
+  @media (max-width: 768px) {
+    padding: 10px 0;
+  }
+  @media (max-width: 480px) {
+    font-size: 14px;
+    line-height: 21px;
+  }
+}
+
+// Title
+
+.title {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 135%;
+  color: #233561;
+  text-align: center;
+  @media (max-width: 768px) {
+      font-size: 40px;
+      line-height: 48px;
+  }
+  @media (max-width: 576px) {
+    font-size: 32px;
+    line-height: 37px;
+  }
+  @media (max-width: 480px) {
+    font-size: 20px;
+    line-height: 27px;
+  }
+}

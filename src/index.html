@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  <div class="ceil-block">
+    <p class="ceil-block__lg">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+    <p class="ceil-block__sm">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+  </div>
+    <section class="promo" style="background-image: url('img/promo-bg.png'); background-size: cover; background-position: center top; background-repeat: no-repeat;">
+
+
+    @include('partials/header.html')
+
+      <div class="container">
+        <div class="promo__wrap">
+          <div class="promo__descr">
+            <h1 class="promo__title">Enjoy your hassle-free <span>loan experience</span></h1>
+            <div class="promo__subtitle">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+            <a href="#" class="promo__btn btn btn-reset"> <img src="img/btn-icon-promo.svg" alt=""> Contact Us</a>
+          </div>
+          <div class="promo__img">
+            <img src="img/promo-img-1.png" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="calculate">
+      <div class="container">
+        <div class="calculate__title title">Calculator</div>
+        <form action="#" class="calculate__wrap">
+          <div class="calculate__item">
+            <div class="calculate__item_wrap">
+              <div class="calculate__img"><img src="img/calculate-dollar-icon.svg" alt=""></div>
+              <div class="calculate__name">Loan Amount</div>
+            </div>
+            <!-- <input type="range" id="loan-amount"> -->
+            <div class="range_container">
+              <output id="amount">$ 50</output>
+              <input type="range" class="range-one" value="50" min="0" max="100" oninput="amount.value= '$' + ' ' + value" />
+            </div>
+            <div class="calculate__item_wrap">
+              <div class="calculate__img"><img src="img/calculate-calendaricon.svg" alt=""></div>
+              <div class="calculate__name">Tenor</div>
+            </div>
+            <!-- <input type="range" id="tenor"> -->
+            <div class="range_container_two">
+              <output id="tenor" style="position: absolute; left: 45%">45 month</output>
+              <input type="range" class="range-two" value="45" min="0" max="100" oninput="tenor.value=value + ' ' + 'month'"/>
+            </div>
+          </div>
+          <div class="calculate__item">
+            <div class="calculate__item_wrap">
+              <div class="calculate__img"><img src="img/calculate-dollar-icon.svg" alt=""></div>
+              <div class="calculate__name">Monthly Repayment</div>
+            </div>
+            <div class="calculate__price">HK<span>$8,589</span> - HK<span>$11,545</span></div>
+            <input type="submit" class="calculate__btn btn" value="Apply Now">
+          </div>
+          <div class="calculate__item">
+            <a href="#" class="calculate__note">Note</a>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section class="our-products">
+      <div class="container">
+        <div class="our-products__title title">Our Products</div>
+        <div class="our-products__wrap">
+          <div class="our-products__item wow animate__fadeInUp" data-wow-duration="2s">
+            <div class="our-products__img"><img src="img/our-products-img-1.png" alt=""></div>
+            <div class="our-products__name">Personal Loan</div>
+            <div class="our-products__back"></div>
+          </div>
+          <div class="our-products__item wow animate__fadeInUp" data-wow-duration="2s">
+            <div class="our-products__img"><img src="img/our-products-img-2.png" alt=""></div>
+            <div class="our-products__name">Home Owner Loan</div>
+            <div class="our-products__back"></div>
+          </div>
+          <div class="our-products__item wow animate__fadeInUp" data-wow-duration="2s">
+            <div class="our-products__img"><img src="img/our-products-img-3.png" alt=""></div>
+            <div class="our-products__name">Balance Transfer</div>
+            <div class="our-products__back"></div>
+          </div>
+          <div class="our-products__item wow animate__fadeInUp" data-wow-duration="2s">
+            <div class="our-products__img"><img src="img/our-products-img-4.png" alt=""></div>
+            <div class="our-products__name">No Income Proof Loan</div>
+            <div class="our-products__back"></div>
+          </div>
+          <div class="our-products__item wow animate__fadeInUp" data-wow-duration="2s">
+            <div class="our-products__img"><img src="img/our-products-img-5.png" alt=""></div>
+            <div class="our-products__name">Student Loan</div>
+            <div class="our-products__back"></div>
+          </div>
+          <div class="our-products__item wow animate__fadeInUp" data-wow-duration="2s">
+            <div class="our-products__img"><img src="img/our-products-img-6.png" alt=""></div>
+            <div class="our-products__name">Flexible Repayment Loan</div>
+            <div class="our-products__back"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    @include('partials/footer.html')
+
+</body>
+
+</html>
