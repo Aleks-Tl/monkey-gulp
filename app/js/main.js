@@ -477,7 +477,23 @@ __webpack_require__.r(__webpack_exports__);
 
  // WOW.js
 
-new WOW().init();
+new WOW().init(); // Fixed header
+
+const header = document.querySelector('.header');
+
+window.onscroll = function () {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  if (document.body.scrollTop > header.clientHeight || document.documentElement.scrollTop > header.clientHeight) {
+    header.classList.add('fixedHeader');
+  } else {
+    header.classList.remove('fixedHeader');
+  }
+} // Calculate
+
+
 const rangeOne = document.querySelector('.range-one');
 const rangeTwo = document.querySelector('.range-two');
 const rangeVal = document.getElementById('amount');
@@ -539,10 +555,6 @@ function handleInputChangeTwo(e) {
   rangeValTenor.style.left = positionVal - 3 + '%';
   target.style.backgroundSize = (val - min) * 100 / (max - min) + '% 100%';
 }
-/* rangeInputs.forEach(input => {
-  input.addEventListener('input', handleInputChange);
-}); */
-
 
 rangeOne.addEventListener('input', handleInputChange);
 rangeTwo.addEventListener('input', handleInputChangeTwo);
