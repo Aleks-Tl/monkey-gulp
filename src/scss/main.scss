@@ -237,6 +237,7 @@
     }
   }
   &.fixedHeader {
+    margin-top: 0;
     position: fixed;
     left: 0;
     top: 0;
@@ -927,6 +928,9 @@
 
 .our-strengh {
   padding-top: 450px;
+  @media (max-width: 768px) {
+      padding-top: 180px;
+  }
   // .our-strengh__title
 
   &__title {}
@@ -934,7 +938,7 @@
   // .our-strengh__wrap
 
   &__wrap {
-    margin-top: 40px;
+    margin-top: 60px;
     padding-bottom: 600px;
     position: relative;
     display: grid;
@@ -956,6 +960,12 @@
         max-width: 70%;
         left: calc(50% - 80px);
       }
+      @media (max-width: 768px) {
+        left: calc(50% - 50px);
+      }
+      @media (max-width: 480px) {
+        left: calc(50% - 30px);
+      }
     }
     @media (max-width: 992px) {
       background-image: none !important;
@@ -963,6 +973,20 @@
       column-gap: 170px;
       grid-template-columns: 270px 270px;
       grid-template-rows: 310px 310px;
+    }
+    @media (max-width: 768px) {
+      grid-template-columns: 35% 35%;
+      grid-template-rows: 180px 180px;
+      row-gap: 70px;
+      column-gap: 150px;
+    }
+    @media (max-width: 480px) {
+      grid-template-columns: 100px 100px;
+      grid-template-rows: 108px 108px;
+      column-gap: 90px;
+    }
+    @media (max-width: 480px) {
+      padding-bottom: 175px;
     }
   }
 
@@ -989,6 +1013,13 @@
       }
       @media (max-width: 992px) {
         transform: translate(0, 0) !important;
+      }
+      @media (max-width: 768px) {
+        .our-strengh__img {
+          img {
+            max-width: 40%;
+          }
+        }
       }
     }
     &:nth-child(2) {
@@ -1018,6 +1049,9 @@
         transform: translate(0, 0);
       }
     }
+    @media (max-width: 480px) {
+        border-radius: 7px;
+    }
   }
 
   // .our-strengh__img
@@ -1028,20 +1062,39 @@
       left: 50%;
       transform: translateX(-50%);
       top: -50px;
+      @media (max-width: 768px) {
+        max-width: 60%;
+      }
+      @media (max-width: 480px) {
+        top: -15%;
+      }
     }
   }
 
   // .our-strengh__name
 
   &__name {
+    width: 100%;
     position: absolute;
     bottom: 30px;
     left: 50%;
     transform: translateX(-50%);
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 38px;
+    color: #1E2945;
+    @media (max-width: 768px) {
+        font-size: 20px;
+        line-height: 25px;
+        bottom: 20px;
+    }
+    @media (max-width: 480px) {
+      font-size: 12px;
+      line-height: 18px;
+      bottom: 10px;
+    }
   }
 }
-
-
 
 // Keyframes
 
