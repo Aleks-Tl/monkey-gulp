@@ -5,7 +5,7 @@ import './_components';
 
 // WOW.js
 
-new WOW().init();
+//new WOW().init();
 
 // Fixed header
 
@@ -86,3 +86,19 @@ rangeOne.addEventListener('input', handleInputChange);
 rangeTwo.addEventListener('input', handleInputChangeTwo);
 
 
+// Reviews slider
+
+const swiper = new Swiper(".reviews__slider", {
+  slidesPerView: 2,
+  spaceBetween: 18,
+  loop: true,
+  navigation: {
+    nextEl: ".swiper-btn-next",
+    prevEl: ".swiper-btn-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+
+});

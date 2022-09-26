@@ -476,8 +476,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
  // WOW.js
-
-new WOW().init(); // Fixed header
+//new WOW().init();
+// Fixed header
 
 const header = document.querySelector('.header');
 
@@ -557,7 +557,21 @@ function handleInputChangeTwo(e) {
 }
 
 rangeOne.addEventListener('input', handleInputChange);
-rangeTwo.addEventListener('input', handleInputChangeTwo);
+rangeTwo.addEventListener('input', handleInputChangeTwo); // Reviews slider
+
+const swiper = new Swiper(".reviews__slider", {
+  slidesPerView: 2,
+  spaceBetween: 18,
+  loop: true,
+  navigation: {
+    nextEl: ".swiper-btn-next",
+    prevEl: ".swiper-btn-prev"
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true
+  }
+});
 })();
 
 /******/ })()
