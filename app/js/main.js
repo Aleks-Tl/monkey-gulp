@@ -476,8 +476,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
  // WOW.js
-//new WOW().init();
-// Fixed header
+
+new WOW().init(); // Fixed header
 
 const header = document.querySelector('.header');
 
@@ -561,7 +561,6 @@ rangeTwo.addEventListener('input', handleInputChangeTwo); // Reviews slider
 
 const swiper = new Swiper(".reviews__slider", {
   slidesPerView: 2,
-  spaceBetween: 18,
   loop: true,
   navigation: {
     nextEl: ".swiper-btn-next",
@@ -570,6 +569,18 @@ const swiper = new Swiper(".reviews__slider", {
   pagination: {
     el: ".swiper-pagination",
     clickable: true
+  },
+  breakpoints: {
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 18
+    },
+    // when window width is >= 480px
+    577: {
+      slidesPerView: 2,
+      spaceBetween: 18
+    }
   }
 });
 })();
