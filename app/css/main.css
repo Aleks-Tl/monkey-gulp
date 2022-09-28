@@ -1019,7 +1019,8 @@ a {
     line-height: 13px;
   }
 }
-.calculate #amount, .calculate #tenor {
+.calculate #amount,
+.calculate #tenor {
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -1028,7 +1029,8 @@ a {
   left: 0;
 }
 @media (max-width: 480px) {
-  .calculate #amount, .calculate #tenor {
+  .calculate #amount,
+.calculate #tenor {
     top: calc(50% + 4px);
   }
 }
@@ -2081,9 +2083,37 @@ a {
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
+  position: relative;
+}
+.footer__wrap ul > li > a:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0%;
+  height: 2px;
+  background-color: #ffffff;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+.footer__wrap ul > li > a:before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0px;
+  width: 0%;
+  height: 2px;
+  background-color: #ffffff;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 .footer__wrap ul > li > a:hover {
-  color: #1E142D;
+  opacity: 0.7;
+}
+.footer__wrap ul > li > a:hover:before, .footer__wrap ul > li > a:hover:after {
+  width: 100%;
 }
 @media (max-width: 576px) {
   .footer__wrap ul > li > a {
